@@ -3,15 +3,15 @@
 
 {% block content %}
     <div class="row">
-        {% for x in products %}
+        {% for product in products %}
         <div class="col-lg-4">
-            <img class='thumbnail' src="{{x.imageURL}}">
+            <img class='thumbnail' src="{{product.imageURL}}">
             <div class="box-element product">
-                <h4><strong>{{x.name}}</strong></h4>
+                <h4><strong>{{product.name}}</strong></h4>
                 <hr>
                 <button class="btn btn-outline-secondary add-btn">Add to cart</button>
                 <a href="" class="btn btn-outline-success">View</a>
-                <h4 style='display: inline-block;float: right'>${{x.price|floatformat:2}}</h4>
+                <h4 style='display: inline-block;float: right'>${{product.price|floatformat:2}}</h4>
             </div>
         </div>
         {% endfor %}
